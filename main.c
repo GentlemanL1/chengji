@@ -20,7 +20,7 @@ int main()
         printf("2--删除学生信息\n");
         printf("3--查看学生信息\n");
 
-        printf("4--所有总分不及格的学生（小于180）\n");
+        printf("4--'所有总分不及格的学生（小于180）\n");
         printf("5--每一科都不及格的学生\n");
         printf("6--显示总分最高的学生\n");
         printf("7--显示平均分最高\n");
@@ -95,9 +95,25 @@ int main()
         }
         if (code == 4)
         {
+            for (int i = 0; i < index; i++)
+            {
+                int sum;
+                sum = arr[i].a + arr[i].b + arr[i].c;
+                if (sum < 180)
+                {
+                    printf("姓名:%s,总分：%d\n", arr[i].d, sum);
+                }
+            }
         }
         if (code == 5)
         {
+            for (int i = 0; i < index; i++)
+            {
+                if (arr[i].a < 60 && arr[i].b < 60 && arr[i].c)
+                {
+                    printf("姓名:%s\n", arr[i].d);
+                }
+            }
         }
         if (code == 6)
         {
