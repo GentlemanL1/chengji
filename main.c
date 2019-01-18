@@ -117,6 +117,22 @@ int main()
         }
         if (code == 6)
         {
+            int min = 0;
+            int id;
+            
+            for (int i = 0; i < index; i++)
+            {
+                int sum;
+                sum = arr[i].a + arr[i].b + arr[i].c;
+                if (sum > min)//提取最大值
+                {
+                    min = sum;
+                    id=i;
+
+                }
+
+            }
+            printf("姓名：%s，总分:%d\n",arr[id].d, min);
         }
         if (code == 7)
         {
