@@ -1,5 +1,16 @@
 #include <stdio.h>
 
+struct xs
+{
+    char d[100];
+    int a;
+    int b;
+    int c;
+};
+
+struct xs arr[100];
+int index = 0;
+
 int main()
 {
 
@@ -22,12 +33,65 @@ int main()
 
         if (code == 1)
         {
+            printf("请输入学生姓名,语文成绩，数学成绩，英语成绩\n");
+
+            int x;
+            int y;
+            int z;
+            // int s;
+
+            // s = x+y;
+            // z = 2 * s;
+
+            // z = 2 * (x + y);
+
+            scanf("%s", arr[index].d);
+            scanf("%d", &x);
+            scanf("%d", &y);
+            scanf("%d", &z);
+
+            //arr[index].d=add;
+            arr[index].a = x;
+            arr[index].b = y;
+            arr[index].c = z;
+
+            index++;
+
+            printf("添加完成，点击回车继续\n");
+            char xx;
+            scanf("%c", &xx);
+            scanf("%c", &xx);
         }
         if (code == 2)
         {
+            if (index > 0)
+            {
+
+                index--;
+                printf("删除完成，点击回车继续\n");
+                char xx;
+                scanf("%c", &xx);
+                scanf("%c", &xx);
+            }
+            else
+            {
+
+                printf("删除失败，点击回车继续\n");
+                char xx;
+                scanf("%c", &xx);
+                scanf("%c", &xx);
+            }
         }
         if (code == 3)
         {
+            for (int i = 0; i < index; i++)
+            {
+                printf("姓名:%s;语文成绩：%d;数学成绩：%d;英语成绩：%d\n", arr[i].d, arr[i].a, arr[i].b, arr[i].c);
+            }
+            printf("查看成功，点击回车继续\n");
+            char xx;
+            scanf("%c", &xx);
+            scanf("%c", &xx);
         }
         if (code == 4)
         {
